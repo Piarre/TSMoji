@@ -9,8 +9,8 @@
     "outDir": "./dist",
     "baseUrl": "./",
     "incremental": true,
-    "typeRoots": ["./node_modules/@types", "./src/index.d.ts"]
+    "typeRoots": ["./node_modules/@types", "test/types.ts"]
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts"],
+  "include": ["src/**/*", "test/index.ts", "test/moji.ts", "test/mojis.ts", "test/types.ts"],
   "exclude": ["node_modules", "test", "lib"]
 }
