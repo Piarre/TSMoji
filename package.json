@@ -1,13 +1,18 @@
 {
-  "name": "tsmoji",
+  "name": "@piarre/tsmoji",
   "version": "1.0.0",
   "description": "",
   "main": "./dist/index.js",
-  "types": "./dist/types.d.ts",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "dev": "vitest",
     "test": "vitest run",
-    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "test:dev": "vitest test/dev.test.ts",
+    "test:live": "vitest test/live.test.ts",
+    "test:build": "npm run build && vitest run test/build.test.ts",
+    "build": "rm -rf dist/ && tsup",
+    "build:watch": "rm -rf dist/ && tsup --watch",
+    "publish": "npm run test:build && npm publish",
     "lint": "tsc"
   },
   "files": [
@@ -18,7 +23,11 @@
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.9.2",
+    "tsup": "^8.0.1",
     "typescript": "^5.2.2",
     "vitest": "^0.34.6"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0"
   }
 }

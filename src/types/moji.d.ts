@@ -1,6 +1,6 @@
 import { Mojis } from "src/variables/mojis";
 
-type Option = AvailableEmojis | MojiName | MojisCode;
+type Option = AvailableEmojis | MojisName | MojisCode;
 
 /**
  * Returns a list of available emojis.
@@ -85,7 +85,7 @@ type AvailableEmojis =
  * Returns a list emojis name
  * @example "art" | "zap" | "fire" | "bug"
  */
-type MojiName =
+type MojisName =
   | "art"
   | "zap"
   | "fire"
@@ -244,9 +244,10 @@ type MojisCode =
  * @example { name: "art", code: ":art:", emoji: "🎨" }
  */
 type Moji = {
-  name: MojiName;
+  name: MojisName;
   code: MojisCode;
   emoji: AvailableEmojis;
+  description: string;
 };
 
-export { Option, AvailableEmojis, MojiName, MojisCode, Moji };
+export { Option, AvailableEmojis, MojisName, MojisCode, Moji };

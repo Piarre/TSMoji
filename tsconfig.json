@@ -8,9 +8,9 @@
     "sourceMap": true,
     "outDir": "./dist",
     "baseUrl": "./",
-    "incremental": true,
-    "typeRoots": ["./node_modules/@types", "test/types.ts"]
+    // "incremental": true,
+    "typeRoots": ["./node_modules/@types", "src/types/*.d.ts"]
   },
-  "include": ["src/**/*", "test/index.ts", "test/moji.ts", "test/mojis.ts", "test/types.ts"],
+  "include": ["src/**/*", "test/index.ts", "test/dev.test.ts", "test/mojis.ts", "test/types.ts"],
   "exclude": ["node_modules", "test", "lib"]
 }
