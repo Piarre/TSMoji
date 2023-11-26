@@ -1,80 +1,59 @@
-import chalk from "chalk";
-import { Moji, MojisName, MojisCode } from "src/types/moji";
-import { Mojis } from "src/variables/mojis";
+import { MojisName, MojisCode } from "src/types/moji";
+import MOJIS from "../constants/mojis";
 
 /**
- * Creates a Moji by combining a message and an icon.
- * @param message - The message to be displayed.
- * @param icon - The name or code of the icon to be displayed.
- * @returns The combined message and icon as a string.
- *
- * @example
- * ```ts
- * console.log(Moji("Hello world", "zap"));
- * ```
+ * Returns a string with an emoji and a message based on the provided icon and message.
+ * @param icon - The name or code of the emoji.
+ * @param message - The message to be displayed with the emoji.
+ * @returns A string with the emoji and the message, or a red flag emoji if the emoji is unknown.
  */
 export function Moji(icon: MojisName | MojisCode, message: string) {
   let founded;
 
-  icon.startsWith(":") ? founded = Mojis.find(moji => moji.code === icon) : founded = Mojis.find(moji => moji.name === icon);
-  
-  return founded ? `${founded.emoji} ${message}` : chalk.red("🚩 Unknow emoji");
+  icon.startsWith(":")
+    ? (founded = MOJIS.find((moji) => moji.code === icon))
+    : (founded = MOJIS.find((moji) => moji.name === icon));
+
+  return founded ? `${founded.emoji} ${message}` : "🚩 Unknow emoji";
 }
 
 /**
  * Retrieves the emoji corresponding to the given code.
- *
  * @param code - The code of the emoji to retrieve.
  * @returns The emoji corresponding to the code, or a red flag emoji if the code is unknown.
- *
- * @example
- * ```ts
- * console.log(getMojiByCode(":test_tube:"));
- * ```
  */
 export function getMojiByCode(code: MojisCode | string) {
-  const founded = Mojis.find((moji) => moji.code === code);
+  const founded = MOJIS.find((moji) => moji.code === code);
 
-  return founded ? founded.emoji : chalk.red("🚩 Unknow emoji");
+  return founded ? founded.emoji : "🚩 Unknow emoji";
 }
 
 /**
- * Retrieves the emoji by its name.
- * @param name - The name of the emoji.
+ * Retrieves the emoji associated with the given name.
+ * @param name The name of the emoji to retrieve.
  * @returns The emoji corresponding to the given name, or a red flag emoji if the name is unknown.
- *
- * @example
- * ```ts
- * console.log(getMojiByName("test-tube"));
- * ```
  */
 export function getMojiByName(name: MojisName) {
-  const founded = Mojis.find((moji) => moji.name === name);
+  const founded = MOJIS.find((moji) => moji.name === name);
 
-  return founded ? founded.emoji : chalk.red("🚩 Unknow emoji");
+  return founded ? founded.emoji : "🚩 Unknow emoji";
 }
 
 /**
- * Get the description of a moji based on its name.
- * @param name - The name of the moji.
- * @returns The emoji description if found, otherwise a red flag emoji indicating an unknown emoji.
- *
- * @example
- * ```ts
- * console.log(getMojiDescription("test-tube"));
- * console.log(getMojiDescription(":test_tube:"));
- * ```
+ * Retrieves the description of a moji based on its name or code.
+ * @param name The name or code of the moji.
+ * @returns The description of the moji, or a red flag emoji if the moji is unknown.
  */
 export function getMojiDescription(name: MojisCode | MojisName) {
   let founded;
   let moji;
 
   if (!name.startsWith(":")) {
-    founded = Mojis.find((moji) => moji.name === name);
-    moji = founded? founded.description : chalk.red("🚩 Unknow emoji");
+    founded = MOJIS.find((moji) => moji.name === name);
+    moji = founded ? founded.description : "🚩 Unknow emoji";
   } else {
-    founded = Mojis.find((moji) => moji.code === name);
-    moji = founded? founded.description : chalk.red("🚩 Unknow emoji");
+    founded = MOJIS.find((moji) => moji.code === name);
+    moji = founded ? founded.description : "🚩 Unknow emoji";
   }
 
   return moji;

@@ -1,33 +1,47 @@
 {
-  "name": "@piarre/tsmoji",
-  "version": "1.0.0",
-  "description": "",
+  "name": "tsmoji",
+  "version": "1.0.1",
+  "description": "🔥 Print ✨ emojis ✨ in TypeScript...",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "type": "commonjs",
+  "publishConfig": {
+    "access": "public",
+    "@Piarre:registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
-    "dev": "vitest",
+    "dev": "rm -rf dist/ && tsup --watch",
     "test": "vitest run",
     "test:dev": "vitest test/dev.test.ts",
     "test:live": "vitest test/live.test.ts",
     "test:build": "npm run build && vitest run test/build.test.ts",
     "build": "rm -rf dist/ && tsup",
-    "build:watch": "rm -rf dist/ && tsup --watch",
-    "publish": "npm run test:build && npm publish",
-    "lint": "tsc"
+    "lint": "eslint ./src"
   },
-  "files": [
-    "dist/"
-  ],
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.9.2",
+    "@typescript-eslint/eslint-plugin": "^6.12.0",
+    "@typescript-eslint/parser": "^6.12.0",
+    "eslint": "^8.54.0",
     "tsup": "^8.0.1",
     "typescript": "^5.2.2",
     "vitest": "^0.34.6"
   },
-  "dependencies": {
-    "chalk": "^5.3.0"
-  }
+  "keywords": [
+    ""
+  ],
+  "author": "Piarre",
+  "license": "MIT",
+  "prettier": {
+    "semi": true,
+    "singleQuote": false
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Piarre/TSMoji.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Piarre/TSMoji/issues"
+  },
+  "homepage": "https://github.com/Piarre/TSMoji#readme"
 }

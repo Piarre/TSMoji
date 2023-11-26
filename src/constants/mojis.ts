@@ -1,4 +1,4 @@
-export const Mojis = [
+const MOJIS = [
   {
     emoji: "🎨",
     entity: "&#x1f3a8;",
@@ -511,3 +511,5 @@ export const Mojis = [
     name: "safety-vest",
   },
 ];
+
+export default MOJIS;

@@ -1,5 +1,3 @@
-import { Mojis } from "src/variables/mojis";
-
 type Option = AvailableEmojis | MojisName | MojisCode;
 
 /**
@@ -243,11 +241,11 @@ type MojisCode =
  * Return an emoji
  * @example { name: "art", code: ":art:", emoji: "🎨" }
  */
-type Moji = {
+type MojiObject = {
   name: MojisName;
   code: MojisCode;
   emoji: AvailableEmojis;
   description: string;
 };
 
-export { Option, AvailableEmojis, MojisName, MojisCode, Moji };
+export { Option, AvailableEmojis, MojisName, MojisCode, MojiObject };

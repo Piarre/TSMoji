@@ -1,4 +1,3 @@
-import { truncate } from "fs";
 import { defineConfig } from "tsup";
 
 export default defineConfig({
@@ -6,4 +5,5 @@ export default defineConfig({
   format: ["cjs", "esm"],
   dts: true,
   clean: true,
+  // bundle: true,
 });

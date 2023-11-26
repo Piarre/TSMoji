@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { Moji, getMojiByCode, getMojiByName, getMojiDescription } from "../src/moji";
+import { Moji, getMojiByCode, getMojiByName, getMojiDescription } from "../src/index"
 
 describe('Moji from "src/" folder', () => {
   it("Get Moji by Code and Name", () => {
