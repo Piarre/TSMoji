@@ -1,5 +1,5 @@
 {
-  "name": "tsmoji",
+  "name": "@piarre/tsmoji",
   "version": "1.0.1",
   "description": "🔥 Print ✨ emojis ✨ in TypeScript...",
   "main": "./dist/index.js",
