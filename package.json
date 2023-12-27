@@ -15,7 +15,10 @@
     "test:live": "vitest test/live.test.ts",
     "test:build": "npm run build && vitest run test/build.test.ts",
     "build": "rm -rf dist/ && tsup",
-    "lint": "eslint ./src"
+    "lint": "eslint ./src",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
   },
   "devDependencies": {
     "@types/node": "^20.9.2",
@@ -24,6 +27,7 @@
     "eslint": "^8.54.0",
     "tsup": "^8.0.1",
     "typescript": "^5.2.2",
+    "vitepress": "^1.0.0-rc.33",
     "vitest": "^0.34.6"
   },
   "keywords": [
