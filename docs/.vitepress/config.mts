@@ -3,8 +3,9 @@ import { defineConfig } from "vitepress";
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "TSMoji",
-  description: "A VitePress Site",
+  description: "🔥 Print ✨ emojis ✨ in TypeScript...",
   cleanUrls: true,
+  titleTemplate: false,
   base: "/",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
