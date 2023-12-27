@@ -4,24 +4,38 @@ layout: home
 
 hero:
   name: "TSMoji"
-  text: "A VitePress Site"
-  tagline: My great project tagline
+  text: "🔥 Print ✨ emojis ✨ in TypeScript..."
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
-    - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: Start now
+      link: /installation
 
-features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  image: /gitmoji.png
 ---
 
+<style>
+:root {
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #ffdd67 10%, #bd34fe);
 
+  --vp-home-hero-image-background-image: linear-gradient(-45deg, #ffdd67 50%, #bd34fe);
+  --vp-home-hero-image-filter: blur(44px);
+}
 
+:root img {
+  border-radius: 22px;
+  height: 256px;
+}
+
+@media (min-width: 640px) {
+  :root {
+    --vp-home-hero-image-filter: blur(56px);
+  }
+}
+
+@media (min-width: 960px) {
+  :root {
+    --vp-home-hero-image-filter: blur(68px);
+  }
+}
+</style>
