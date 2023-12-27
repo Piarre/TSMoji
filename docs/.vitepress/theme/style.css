@@ -76,8 +76,9 @@ default :root {
  * -------------------------------------------------------------------------- */
 
 :root {
-  --vp-font-family-base: 'DM Sans', sans-serif;
-  --vp-font-family-mono: 'DM Sans', sans-serif;
+  --vp-font-family-base: "DM Sans", sans-serif;
+  --vp-font-family-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Monaco,
+    Consolas, "Liberation Mono", "Courier New", monospace;
 
   --vp-button-brand-border: transparent;
   --vp-button-brand-text: var(--vp-c-white);
