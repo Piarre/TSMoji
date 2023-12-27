@@ -1,9 +1,9 @@
 import { describe, expect, it } from "vitest";
-import { Moji, getMojiByCode, getMojiByName } from "../src/moji";
-import chalk from "chalk";
+
+import { moji } from "../dist";
 
 describe("Live test", () => {
   it("Dev", () => {
-    Moji("", "")
+    console.log(moji(":passport_control:"));
   });
 });

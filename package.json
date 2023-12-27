@@ -1,13 +1,12 @@
 {
   "name": "@piarre/tsmoji",
-  "version": "1.0.1",
+  "version": "1.0.7",
   "description": "🔥 Print ✨ emojis ✨ in TypeScript...",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "type": "commonjs",
   "publishConfig": {
-    "access": "public",
-    "@Piarre:registry": "https://npm.pkg.github.com"
+    "access": "public"
   },
   "scripts": {
     "dev": "rm -rf dist/ && tsup --watch",

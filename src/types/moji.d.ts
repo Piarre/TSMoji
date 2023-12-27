@@ -1,83 +1,4 @@
-type Option = AvailableEmojis | MojisName | MojisCode;
-
-/**
- * Returns a list of available emojis.
- * @example 🎨 | ⚡️ | 🔥 | 🐛
- */
-type AvailableEmojis =
-  | "🎨"
-  | "⚡️"
-  | "🔥"
-  | "🐛"
-  | "🚑️"
-  | "✨"
-  | "📝"
-  | "🚀"
-  | "💄"
-  | "🎉"
-  | "✅"
-  | "🔒️"
-  | "🔐"
-  | "🔖"
-  | "🚨"
-  | "🚧"
-  | "💚"
-  | "⬇️"
-  | "⬆️"
-  | "📌"
-  | "👷"
-  | "📈"
-  | "♻️"
-  | "➕"
-  | "➖"
-  | "🔧"
-  | "🔨"
-  | "🌐"
-  | "✏️"
-  | "💩"
-  | "⏪️"
-  | "🔀"
-  | "📦️"
-  | "👽️"
-  | "🚚"
-  | "📄"
-  | "💥"
-  | "🍱"
-  | "♿️"
-  | "💡"
-  | "🍻"
-  | "💬"
-  | "🗃️"
-  | "🔊"
-  | "🔇"
-  | "👥"
-  | "🚸"
-  | "🏗️"
-  | "📱"
-  | "🤡"
-  | "🥚"
-  | "🙈"
-  | "📸"
-  | "⚗️"
-  | "🔍️"
-  | "🏷️"
-  | "🌱"
-  | "🚩"
-  | "🥅"
-  | "💫"
-  | "🗑️"
-  | "🛂"
-  | "🩹"
-  | "🧐"
-  | "⚰️"
-  | "🧪"
-  | "👔"
-  | "🩺"
-  | "🧱"
-  | "🧑‍💻"
-  | "💸"
-  | "🧵"
-  | "🦺";
+type Option = MojisName | MojisCode;
 
 /**
  * Returns a list emojis name
@@ -242,10 +163,11 @@ type MojisCode =
  * @example { name: "art", code: ":art:", emoji: "🎨" }
  */
 type MojiObject = {
+  emoji: string;
+  entity: string;
   name: MojisName;
   code: MojisCode;
-  emoji: AvailableEmojis;
   description: string;
 };
 
-export { Option, AvailableEmojis, MojisName, MojisCode, MojiObject };
+export { Option, MojisName, MojisCode, MojiObject };

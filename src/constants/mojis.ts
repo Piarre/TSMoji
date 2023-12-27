@@ -1,4 +1,6 @@
-const MOJIS = [
+import { MojiObject } from "src/types/moji";
+
+const MOJIS: MojiObject[] = [
   {
     emoji: "🎨",
     entity: "&#x1f3a8;",
@@ -430,7 +432,8 @@ const MOJIS = [
     emoji: "🛂",
     entity: "&#x1F6C2;",
     code: ":passport_control:",
-    description: "Work on code related to authorization, roles and permissions.",
+    description:
+      "Work on code related to authorization, roles and permissions.",
     name: "passport-control",
   },
   {
@@ -511,5 +514,11 @@ const MOJIS = [
     name: "safety-vest",
   },
 ];
+
+const MOJI_NAMES = MOJIS.map((moji) => moji.name);
+const MOJI_CODES = MOJIS.map((moji) => moji.code);
+const MOJI_EMOJI = MOJIS.map((moji) => moji.emoji);
+
+export { MOJI_NAMES, MOJI_CODES, MOJI_EMOJI };
 
 export default MOJIS;

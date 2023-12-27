@@ -1,9 +1,8 @@
 import { defineConfig } from "tsup";
 
 export default defineConfig({
-  entryPoints: ["src/index.ts"],
+  entryPoints: ["src/**/*.ts"],
   format: ["cjs", "esm"],
   dts: true,
   clean: true,
-  // bundle: true,
 });
